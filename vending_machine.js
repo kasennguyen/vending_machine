@@ -1,4 +1,5 @@
 var currency = 0;
+
 function dispenser(){
     var item = prompt("Please enter item code:", "");
     if(item != null){
