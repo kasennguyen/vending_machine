@@ -8,18 +8,34 @@
 <body>
 <script src="vending_machine.js"></script>
 <h2>Vending Machine by Kasen Nguyen</h2>
-
-  <div>  
-  <p><button onclick="dispenser()">Enter Code</button></p>
+  
+<!-- Buttons -->
+<div>  
+  <button onclick="buttonA()">A</button>  
+  <button onclick="button1()">1</button> <br>
+  <button onclick="buttonB()">B</button>  
+  <button onclick="button2()">2</button> <br>  
+  <button onclick="buttonC()">C</button>  
+  <button onclick="button3()">3</button>  
+  <p>
+  <button onclick="resetCode()">Reset Code</button>
+  <button onclick="dispenser()">Enter Code</button>
+  </p>
   <button onclick="add25Cents()">Add .25</button> 
   <button onclick="addOne()">Add $1</button>
-  <p id="test"></p>
-  <p id="test2"></p>
-  <p id ="test3"></p>
+    
+  <p id="Dispensed"></p>
+  <p id="newBalance"></p>
+  <p id ="noMoney"></p>
+  <p id ="inputCode"></p>
+  
   <script>
-    document.getElementById("test2").innerHTML = "Your balance is $0";</script>
+    document.getElementById("Dispensed").innerHTML = "Tray is empty.";
+    document.getElementById("newBalance").innerHTML = "Your balance is $0.";    
+  </script>
   </div> 
   
+<!-- Vending Machine -->
   <div id="machine">
     <div class="items">Snickers <strong>(A1)</strong> $1.00</div>  
     <div class="items">Skittles <strong>(A2)</strong> $1.50</div>
@@ -34,4 +50,5 @@
   </div>
 </body>
 </html>
+
 

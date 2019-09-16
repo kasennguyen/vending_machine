@@ -1,114 +1,185 @@
 var currency = 0;
+var inputCode = "";
 
+/* Reads inputted code and dispenses selected item */
 function dispenser(){
-    var item = prompt("Please enter item code:", "");
-    if(item != null){
-      if(item == "A1"){
-        if(currency >= 1){
-          document.getElementById("test").innerHTML = "Snickers Dispensed";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 1);
-          currency = currency - 1;
+  if(inputCode != null){
+    if(inputCode == "A1"){
+      if(currency >= 1){
+        document.getElementById("Dispensed").innerHTML = "Snickers Dispensed";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 1) + ".";
+        currency = currency - 1;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
+      }
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
+       }
+    }
+    if(inputCode == "A2"){
+      if(currency >= 1.50){
+        document.getElementById("Dispensed").innerHTML = "Skittles Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 1.50) + ".";
+        currency = currency - 1.50;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
+      }
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
         }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
+    }
+    if(inputCode == "A3"){
+      if(currency >= 1.50){
+        document.getElementById("Dispensed").innerHTML = "M&M's Dispensed";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 1.50) + ".";
+        currency = currency - 1.50;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
+      }
+      else{
+          document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+          document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+          inputCode = "";
+          document.getElementById("inputCode").innerHTML = inputCode;
          }
+    }
+    if(inputCode == "B1"){
+      if(currency >= 2){
+        document.getElementById("Dispensed").innerHTML = "Cheetos Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 2) + ".";
+        currency = currency - 2;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
       }
-      if(item == "A2"){
-        if(currency >= 1.50){
-          document.getElementById("test").innerHTML = "Skittles Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 1.50);
-          currency = currency - 1.50;
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
         }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-          }
-      }
-      if(item == "A3"){
-        if(currency >= 1.50){
-          document.getElementById("test").innerHTML = "M&M's Dispensed";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 1.50);
-          currency = currency - 1.50;
+    }
+    if(inputCode == "B2"){
+      if(currency >= 2){
+        document.getElementById("Dispensed").innerHTML = "Doritos Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 2) + ".";
+        currency = currency - 2;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
         }
-        else{
-            document.getElementById("test").innerHTML = "Nothing Dispensed";
-            document.getElementById("test3").innerHTML = "You do not have enough money";
-           }
-      }
-      if(item == "B1"){
-        if(currency >= 2){
-          document.getElementById("test").innerHTML = "Cheetos Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 2);
-          currency = currency - 2;
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
         }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-          }
+    }
+    if(inputCode == "B3"){
+      if(currency >= 1.75){
+        document.getElementById("Dispensed").innerHTML = "Lay's Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 1.75) + ".";
+        currency = currency - 1.75;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
       }
-      if(item == "B2"){
-        if(currency >= 2){
-          document.getElementById("test").innerHTML = "Doritos Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 2);
-          currency = currency - 2;
-          }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-          }
-      }
-      if(item == "B3"){
-        if(currency >= 1.75){
-          document.getElementById("test").innerHTML = "Lay's Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 1.75);
-          currency = currency - 1.75;
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
         }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-          }
+    }
+    if(inputCode == "C1"){
+      if(currency >= 1.75){
+        document.getElementById("Dispensed").innerHTML = "Ruffles Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 1.75) + ".";
+        currency = currency - 1.75;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
       }
-      if(item == "C1"){
-        if(currency >= 1.75){
-          document.getElementById("test").innerHTML = "Ruffles Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 1.75);
-          currency = currency - 1.75;
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
         }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-          }
+    }
+    if(inputCode == "C2"){
+      if(currency >= 1.50){
+        document.getElementById("Dispensed").innerHTML = "Funyuns Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 1.50) + ".";
+        currency = currency - 1.50;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
       }
-      if(item == "C2"){
-        if(currency >= 1.50){
-          document.getElementById("test").innerHTML = "Funyuns Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 1.50);
-          currency = currency - 1.50;
-        }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-         }
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
+       }
+    }
+    if(inputCode == "C3"){
+      if(currency >= 3){
+        document.getElementById("Dispensed").innerHTML = "Jerkey Dispensed.";
+        document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency - 3) + ".";
+        currency = currency - 3;
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
       }
-      if(item == "C3"){
-        if(currency >= 3){
-          document.getElementById("test").innerHTML = "Jerkey Dispensed.";
-          document.getElementById("test2").innerHTML = "Your balance is $" + (currency - 3);
-          currency = currency - 3;
-        }
-        else{
-          document.getElementById("test").innerHTML = "Nothing Dispensed";
-          document.getElementById("test3").innerHTML = "You do not have enough money";
-         }
-      }
+      else{
+        document.getElementById("Dispensed").innerHTML = "Nothing Dispensed";
+        document.getElementById("noMoney").innerHTML = "You do not have enough money!";
+        inputCode = "";
+        document.getElementById("inputCode").innerHTML = inputCode;
+       }
     }
   }
+}
+
+/* Adds money to balance */
 function add25Cents(){
-  document.getElementById("test2").innerHTML = "Your balance is $" + (currency + .25);
+  document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency + .25) + ".";
   currency += .25;
 }
 function addOne(){
-  document.getElementById("test2").innerHTML = "Your balance is $" + (currency + 1);
+  document.getElementById("newBalance").innerHTML = "Your balance is $" + (currency + 1) + ".";
   currency += 1;
+}
+
+/* Button Inputs */
+function buttonA(){
+  inputCode = inputCode + "A";
+  document.getElementById("inputCode").innerHTML = inputCode;
+}
+function buttonB(){
+  inputCode = inputCode + "B";
+  document.getElementById("inputCode").innerHTML = inputCode;
+}
+function buttonC(){
+  inputCode = inputCode + "C";
+  document.getElementById("inputCode").innerHTML = inputCode;
+}
+function button1(){
+  inputCode = inputCode + "1";
+  document.getElementById("inputCode").innerHTML = inputCode;
+}
+function button2(){
+  inputCode = inputCode + "2";
+  document.getElementById("inputCode").innerHTML = inputCode;
+}
+function button3(){
+  inputCode = inputCode + "3";
+  document.getElementById("inputCode").innerHTML = inputCode;
+}
+
+/* Resets Code */
+function resetCode(){
+  inputCode = "";
+  document.getElementById("inputCode").innerHTML = inputCode;
 }
