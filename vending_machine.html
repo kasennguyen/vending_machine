@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="vending_machine.css">
+<style>
+</style>
+</head>
+<body>
+<script src="vending_machine.js"></script>
+<h2>Vending Machine by Kasen Nguyen</h2>
+
+  
+  <p><button onclick="dispenser()">Enter Code</button></p>
+  <p><button onclick="add25Cents()">Add 0.25</button></p>
+  <p><button onclick="addOne()">Add $1</button></p>
+  <p id="test"></p>
+  <p id="test2"></p>
+  <p id ="test3"></p>
+  <script>
+    document.getElementById("test2").innerHTML = "Your balance is $0";</script>
+ 
+  <div id="machine">
+    <div class="items">Snickers <strong>(A1)</strong> $1.00</div>  
+    <div class="items">Skittles <strong>(A2)</strong> $1.50</div>
+    <div class="items">M&M's <strong>(A3)</strong> $1.50</div>
+    <div class="items">Cheetos <strong>(B1)</strong> $2.00</div>
+    <div class="items">Doritos <strong>(B2)</strong> $2.00</div>
+    <div class="items">Lay's <strong>(B3)</strong> $1.75</div>
+    <div class="items">Ruffles <strong>(C1)</strong> $1.75</div>
+    <div class="items">Funyuns <strong>(C2)</strong> $1.50</div>
+    <div class="items">Jerkey <strong>(C3)</strong> $3.00</div>
+    <div class="tray"></div>
+  </div>
+</body>
+</html>
+
